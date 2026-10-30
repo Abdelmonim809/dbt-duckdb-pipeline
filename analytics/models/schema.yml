@@ -1,0 +1,47 @@
+models:
+  - name: job_posting
+    description: clean postings
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+    columns:
+      - name: id
+        description: unique id for the job posting
+      - name: title
+        description: title of the job posting
+      - name: company_name
+        description: name of the company posting the job
+      - name: location
+        description: location of the job posting
+      - name: date_posted
+        description: date when the job was posted
+      - name: job_description
+        description: full text of the job description
+
+  - name: jobs_per_month
+    description: number of jobs posted per month
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+    columns:
+      - name: month
+        description: month of the job posting
+      - name: role
+        description: role of the job posting
+      - name: postings
+        description: number of jobs posted in that month
+
+
+  - name: top_locations
+    description: top locations for job postings
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+    columns:
+      - name: job_location
+        description: location of the job posting
+      - name: postings
+        description: number of jobs posted in that location
