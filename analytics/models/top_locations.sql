@@ -8,4 +8,4 @@ GROUP BY
      job_location
 ORDER BY
      postings DESC
-limit 10;
+limit 10
