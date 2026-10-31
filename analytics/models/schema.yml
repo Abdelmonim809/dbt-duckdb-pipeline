@@ -6,18 +6,26 @@ models:
         relation: true
         columns: true
     columns:
-      - name: id
+      - name: job_id
         description: unique id for the job posting
-      - name: title
+      - name: job_title
         description: title of the job posting
+        data_tests:
+          - not_null
       - name: company_name
         description: name of the company posting the job
-      - name: location
+      - name: job_location
         description: location of the job posting
-      - name: date_posted
-        description: date when the job was posted
-      - name: job_description
-        description: full text of the job description
+      - name: job_via
+        description: posting location as scraped
+      - name: job_schedule_type
+        description: schedule as posted
+      - name: job_work_from_home
+        description: whether the job is remote or not
+      - name: search_date
+        description: date the job was posted
+      - name: search_term
+        description: search term used to find the job posting
 
   - name: jobs_per_month
     description: number of jobs posted per month
@@ -55,6 +63,9 @@ models:
     columns:
       - name: month
         description: searching by month
+        data_tests:
+          - unique
+          - not_null
       - name: total_postings
         description: total number of jobs posted in that month
       - name: remote_postings
