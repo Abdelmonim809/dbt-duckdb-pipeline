@@ -1,4 +1,4 @@
-# Automated Job Postings pipeline (v2) - dbt + DuckDB
+# Automated Job Postings pipeline (v1) - dbt + DuckDB
 
 ![dbt pipeline diagram](img/db_pipeline.png)
 
